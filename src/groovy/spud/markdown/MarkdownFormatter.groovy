@@ -1,9 +1,13 @@
 package spud.markdown
 
 import spud.core.Formatter
-
+import org.pegdown.PegDownProcessor
 class MarkdownFormatter implements FormatterInterface {
 	String compile(String input) {
-		//Pegdown Calls to compile
+		if(!input) {
+			return input
+		}
+		def processor = new PegDownProcessor()
+		return processor.markdownToHtml(input)
 	}
 }
