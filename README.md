@@ -17,4 +17,4 @@ plugins {
 }
 ```
 
-Now you can freely use markdown in any of the formatted editor sections of spud. Simply choose Markdown from the format dropdown box and a codemirror editor wil show up.
+Now you can freely use markdown in any of the formatted editor sections of spud. Simply choose Markdown from the format dropdown box and a codemirror editor will show up.
