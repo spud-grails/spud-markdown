@@ -1,7 +1,8 @@
 package spud.markdown
 
-import spud.core.Formatter
+import spud.core.FormatterInterface
 import org.pegdown.PegDownProcessor
+
 class MarkdownFormatter implements FormatterInterface {
 	String compile(String input) {
 		if(!input) {

@@ -23,11 +23,13 @@ grails.project.dependency.resolution = {
         mavenCentral()
     }
     dependencies {
-        compile 'org.pegdown:pegdown:1.4.2'
+        compile 'org.jsoup:jsoup:1.6.1'
+		compile 'org.apache.commons:commons-lang3:3.0.1'
+		compile 'org.pegdown:pegdown:1.1.0'
     }
 
     plugins {
-        runtime ':spud-core:0.4.0'
+        runtime ':spud-core:0.4.1'
         build(":release:3.0.1",
               ":rest-client-builder:1.0.3") {
             export = false
