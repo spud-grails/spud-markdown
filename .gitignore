@@ -2,4 +2,6 @@ target/
 plugin.xml
 .DS_Store
 *.zip
+web-app/WEB-INF/tld/*
+
 
