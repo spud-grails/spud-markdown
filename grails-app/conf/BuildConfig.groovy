@@ -25,7 +25,8 @@ grails.project.dependency.resolution = {
     dependencies {
         compile 'org.jsoup:jsoup:1.6.1'
 		compile 'org.apache.commons:commons-lang3:3.0.1'
-		compile 'org.pegdown:pegdown:1.1.0'
+		/*compile 'org.pegdown:pegdown:1.1.0'*/
+        compile 'org.commonjava.googlecode.markdown4j:markdown4j:2.2-cj-1.0'
     }
 
     plugins {
