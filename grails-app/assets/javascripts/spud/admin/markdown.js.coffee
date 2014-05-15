@@ -4,7 +4,7 @@
 class @MarkdownEditor extends @SpudCodeMirror
 	defaultOptions:
 		lineNumbers: false
-		lineWrapper: true
+		lineWrapping: true
 		theme: 'default'
 		mode:
 			name: 'markdown'
