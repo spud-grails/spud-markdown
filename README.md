@@ -13,7 +13,7 @@ This documentation assumes you are already running `spud-core` or `spud-cms` plu
 
 ```groovy
 plugins {
-	compile ":spud-markdown:0.4.0"
+	compile ":spud-markdown:0.5.0"
 }
 ```
 
