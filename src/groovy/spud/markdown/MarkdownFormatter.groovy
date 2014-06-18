@@ -13,7 +13,12 @@ class MarkdownFormatter implements FormatterInterface {
 		/*return processor.markdownToHtml(input)*/
 		/*RootNode astRoot = processor.parseMarkdown(input)*/
 		/*String html = new MyCustomToHtmlSerializer().toHtml(astRoot);*/
-		return new Markdown4jProcessor().process(input);
-		/*.markdownToHtml(input)*/
+		def markdownText = Markdown4jProcessor().process(input);
+
+		// Lets fix our handlebars escaping
+		return markdownText.replaceAll(/({{{?.*}}}?)/) { fullMatch, handlebarsPattern -> 
+			return handlebarsPattern.decodeHTML()
+		}
+		
 	}
 }

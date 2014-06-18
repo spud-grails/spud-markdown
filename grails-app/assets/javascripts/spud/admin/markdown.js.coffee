@@ -1,5 +1,5 @@
 #= require spud/admin/codemirror
-#= require codemirror/mode/markdown/markdown
+#= require spud/codemirror/mode/markdown/markdown
 
 class @MarkdownEditor extends @SpudCodeMirror
 	defaultOptions:
