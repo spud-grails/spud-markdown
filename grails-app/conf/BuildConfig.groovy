@@ -30,13 +30,19 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        runtime ':spud-core:0.5.0'
-        build(":release:3.0.1",
-              ":rest-client-builder:1.0.3") {
-            export = false
-        }
-        runtime(':hibernate:3.6.10.13') {
-            export = false
+        if(System.getProperty('plugin.mode') != 'local') {
+            runtime ':spud-core:0.6.0'
+            build(":release:3.0.1",
+                  ":rest-client-builder:1.0.3") {
+                export = false
+            }
+            runtime(':hibernate:3.6.10.13') {
+                export = false
+            }
         }
     }
+}
+
+if(System.getProperty('plugin.mode') == 'local') {
+    grails.plugin.location."spud-core" = "../spud-core"
 }
