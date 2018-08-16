@@ -12,7 +12,7 @@ import org.springframework.core.env.PropertySource
 class SpudMarkdownGrailsPlugin extends Plugin {
 
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "3.1.12 > *"
+    def grailsVersion = "3.3.7 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
         "grails-app/views/error.gsp"

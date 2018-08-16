@@ -62,7 +62,7 @@ dependencies {
     compile "org.grails:grails-web-boot"
     compile "org.grails.plugins:cache"
     compile "org.grails.plugins:scaffolding"
-	compile "spud.core:spud-core:3.0.0-SNAPSHOT"
+	compile "spud.core:spud-core:3.3.0-SNAPSHOT"
 	compile "org.commonjava.googlecode.markdown4j:markdown4j:2.2-cj-1.1"
 	compile "org.grails:grails-datastore-rest-client"
 	compile "com.bertramlabs.plugins:coffee-asset-pipeline:${assetPipelineVersion}"
@@ -78,7 +78,10 @@ dependencies {
 
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"
-    testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
+	testCompile "org.grails:grails-gorm-testing-support:1.1.4"
+	testCompile "org.grails:grails-web-testing-support:1.1.4"
+
+	testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
 }
 grailsPublish {
