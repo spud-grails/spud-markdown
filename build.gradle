@@ -74,7 +74,6 @@ dependencies {
 	compile "spud.core:spud-core:3.3.0-SNAPSHOT"
 	compile "org.commonjava.googlecode.markdown4j:markdown4j:2.2-cj-1.1"
 	compile "org.grails:grails-datastore-rest-client"
-	compile "com.bertramlabs.plugins:coffee-asset-pipeline:${assetPipelineVersion}"
 
     console "org.grails:grails-console"
 
@@ -92,6 +91,8 @@ dependencies {
 
 	testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
+
+	assets "com.bertramlabs.plugins:coffee-asset-pipeline:${assetPipelineVersion}"
 }
 
 bootRun {
@@ -119,7 +120,12 @@ grailsPublish {
 }
 
 assets {
-    packagePlugin = true
+	minifyJs = false
+	minifyCss = false
+
+    enableSourceMaps = true
+
+	packagePlugin = true
 }
 
 task wrapper(type: Wrapper) {
