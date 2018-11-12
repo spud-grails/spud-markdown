@@ -66,6 +66,7 @@ Adds Markdown formatting support to the Spud Site Management platform.
 //		def customConfig = "[name: 'markdown', description: 'Markdown', formatterClass: spud.markdown.MarkdownFormatter]"
 //		grailsApplication.config.spud.formatters << [name: 'markdown', description: 'Markdown', formatterClass: spud.markdown.MarkdownFormatter]
 //		println "doWithApplicationContext customConfig: ${customConfig}"
+		log.debug "doWithApplicationContext called"
 		def customConfig = [:]
 		customConfig.name = 'markdown'
 		customConfig.description = 'Markdown'

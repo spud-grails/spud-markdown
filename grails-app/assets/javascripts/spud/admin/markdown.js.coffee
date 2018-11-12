@@ -16,6 +16,7 @@ class @MarkdownEditor
 			name: 'markdown'
 
 	constructor: (@element, options) ->
+		console.log("spud.markdown markdown constructor called");
 		if !@element.attr('id')
 			@assignId()
 
